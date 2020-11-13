@@ -2,7 +2,7 @@
 
 Simple code to select a random item from an array of items
 
-    ```js
+    ```
     let arp = require("arrayrandompicker");
     var input = [
                     {name: "Ted", age : 34},
@@ -18,7 +18,7 @@ Simple code to select a random item from an array of items
 
 Or also return the Index of the randomly selected item
 
-    ```js
+    ```
     let arp = require("arrayrandompicker");
     var input = [
                     {name: "Ted", age : 34},
