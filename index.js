@@ -5,18 +5,22 @@ function randomNumberBetween(min, max) {
     return Math.floor(r * (max - min + 1) + min)
 }
 
-function selectRandomArrayItem(input) {
+function selectRandomArrayItem(input, includeIndex) {
     var inputLength = input.length - 1
-    var randomIndex = this.randomNumberBetween(0, inputLength)
+    var randomIndex = randomNumberBetween(0, inputLength)
 
     if(debug){
         console.log(`Random index number ${randomIndex} input length ${inputLength}`)
     }
     
-    return {
-        value: input[randomIndex],
-        key: randomIndex
+    if(includeIndex){
+        return {
+            value: input[randomIndex],
+            key: randomIndex
+        }
     }
+
+    return input[randomIndex];
 }
 
 module.exports = {

@@ -15,6 +15,14 @@
 		"index",
 		"selection"
 	],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TechDevils/array-random-picker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TechDevils/array-random-picker/issues"
+  },
+  "homepage": "https://github.com/TechDevils/array-random-picker#readme",
   "author": "Andrew Chadwick",
   "license": "ISC"
 }
