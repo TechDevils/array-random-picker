@@ -1,3 +1,8 @@
+var debug = false;
+function switchDebug(){
+    debug = !debug;
+}
+
 function randomNumberBetween(min, max) {
     min = Math.ceil(min)
     max = Math.floor(max)
@@ -24,5 +29,6 @@ function selectRandomArrayItem(input, includeIndex) {
 }
 
 module.exports = {
-    selectRandomArrayItem
+    selectRandomArrayItem,
+    switchDebug
 }
