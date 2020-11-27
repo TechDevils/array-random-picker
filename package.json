@@ -1,6 +1,6 @@
 {
   "name": "arrayrandompicker",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Select a random item from an array.",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,11 @@
 		"pick",
 		"picker",
 		"index",
-		"selection"
+    "selection", 
+    "shuffle",
+    "many",
+    "repeating",
+    "options"
 	],
   "repository": {
     "type": "git",
