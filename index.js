@@ -1,27 +1,30 @@
 var debug = false;
+var options = {includeIndex: false, range: 1}
+
 function switchDebug(){
     debug = !debug;
 }
 
-function selectRandomArrayItem(input, options) {
-    var includeIndex = false, range = 1;
+function selectRandomArrayItem(input, args = undefined) {
+    var {includeIndex, range} = options;
 
     if(arguments.length > 2)
-        return new Error("Error Too Many Params are Passed");
+        return new Error("Error: Too Many Params are Passed");
 
-    if(typeof options === "number"){
-        includeIndex = false;
-        range = options;
+    if(args !== undefined){
+        if(Number.isInteger(args)){
+            includeIndex = false;
+            range = args;
+        }
+
+        else if(typeof args === "boolean"){
+            range = 1;
+            includeIndex = args;
+        }
+
+        else
+            return new Error("Error: The Arguments (args) Does not Accept Value Except Boolean or Int");
     }
-
-    else if(typeof options === "boolean"){
-        range = 1;
-        includeIndex = options;
-    }
-
-    else
-        return new Error("Unknown Error Has Occured During selectRandomArrayItem()");
-    
 
     var result = shuffleArray([...input]).splice(0,range);
 
