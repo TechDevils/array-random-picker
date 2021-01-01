@@ -26,7 +26,7 @@ function selectManyRepeatingRandomArrayItems(input, range, includeIndex){
         var index = randomNumberBetween(0,arrayLength);
         var outputValue = input[index];
         if(includeIndex){
-            outputValue = {key:index, value:arrayValue };
+            outputValue = {key:index, value:input[index] };
         }
         output.push(outputValue)
     }

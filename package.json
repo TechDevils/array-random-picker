@@ -1,6 +1,6 @@
 {
   "name": "arrayrandompicker",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Select a random item from an array.",
   "main": "index.js",
   "scripts": {
